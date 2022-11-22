@@ -9,7 +9,11 @@ module.exports = {
         "./app.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+            },
+        },
     },
     corePlugins: {
         preflight: false,

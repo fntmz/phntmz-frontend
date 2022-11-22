@@ -1,5 +1,7 @@
 <script setup>
-import BannerVue from "./components/Banner.vue";
+import IndexVue from "./pages/index.vue";
+import SettingsVue from "./components/Settings.vue";
+import MenuVue from "./components/Menu.vue";
 
 // (\=============== DARKMODE ===============/)
 if (localStorage.getItem("darkmode")) {
@@ -10,6 +12,9 @@ if (localStorage.getItem("darkmode")) {
 </script>
 
 <template>
-    <BannerVue />
+    <SettingsVue />
+    <MenuVue />
+
+    <IndexVue />
 </template>
 
