@@ -39,6 +39,31 @@ a:hover {
 body {
     margin: 0;
 }
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    display: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 9999px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
 
 /* (\=============== DARKMODE ===============/) */
 body[data-theme="dark_theme"] {
@@ -47,6 +72,7 @@ body[data-theme="dark_theme"] {
     --color: white;
     --bg-color: black;
     --accent: rgb(100, 100, 255);
+    --alt-accent: rgb(255, 100, 100);
 }
 body[data-theme="light_theme"] {
     color: black;
@@ -54,4 +80,5 @@ body[data-theme="light_theme"] {
     --color: black;
     --bg-color: whitesmoke;
     --accent: rgb(255, 100, 100);
+    --alt-accent: rgb(100, 100, 255);
 }

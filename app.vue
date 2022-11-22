@@ -1,7 +1,6 @@
 <script setup>
-import IndexVue from "./pages/index.vue";
-import SettingsVue from "./components/Settings.vue";
-import MenuVue from "./components/Menu.vue";
+import settingsVue from "./components/settings.vue";
+import menuVue from "./components/Menu.vue";
 
 // (\=============== DARKMODE ===============/)
 if (localStorage.getItem("darkmode")) {
@@ -12,9 +11,8 @@ if (localStorage.getItem("darkmode")) {
 </script>
 
 <template>
-    <SettingsVue />
-    <MenuVue />
+    <settingsVue />
+    <menuVue />
 
-    <IndexVue />
+    <NuxtPage />
 </template>
-

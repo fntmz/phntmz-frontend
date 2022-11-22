@@ -16,10 +16,10 @@ function nextWord() {
 
 <template>
     <div
-        class="relative w-screen h-screen bg-[var(--bg-color)] flex justify-center items-center flex-col overflow-hidden"
+        class="relative w-screen h-screen bg-bg-color flex justify-center items-center flex-col overflow-hidden"
     >
         <h1
-            class="text-[64px] font-semibold tracking-[.5em] text-transparent text-8xl bg-clip-text bg-gradient-to-r from-[var(--color)] via-[var(--accent)] cursor-pointer"
+            class="text-[64px] font-semibold tracking-[.5em] text-transparent text-8xl bg-clip-text bg-gradient-to-r from-color via-accent cursor-pointer"
             @click="nextWord"
         >
             <span
@@ -32,10 +32,10 @@ function nextWord() {
         <h3 class="font-normal tracking-wider">nguyen hieu minh // phntmz_</h3>
 
         <div
-            class="absolute -left-1/4 top-[60%] w-full h-full bg-gradient-radial from-[var(--accent)] via-transparent opacity-30"
+            class="absolute -left-1/4 top-[60%] w-full h-full bg-gradient-radial from-accent via-transparent opacity-30"
         ></div>
         <div
-            class="absolute -right-[40%] bottom-[65%] w-full h-full bg-gradient-radial from-[var(--accent)] via-transparent opacity-30"
+            class="absolute -right-[40%] bottom-[65%] w-full h-full bg-gradient-radial from-accent via-transparent opacity-30"
         ></div>
     </div>
 </template>

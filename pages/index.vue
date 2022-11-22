@@ -1,7 +1,9 @@
 <script setup>
-import BannerVue from "~~/components/index/Banner.vue";
+import aboutVue from "~~/components/index/about.vue";
+import bannerVue from "~~/components/index/banner.vue";
 </script>
 
 <template>
-    <BannerVue />
+    <bannerVue />
+    <aboutVue />
 </template>
