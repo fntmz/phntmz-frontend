@@ -2,9 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 :root {
-    color: white;
+    color: var(--color);
     overflow-x: hidden;
     font-family: "Montserrat", sans-serif;
     font-size: 16px;
@@ -29,12 +28,12 @@
     }
 }
 a {
-    color: black;
+    color: var(--color);
     text-decoration: none;
+    transition: color 300ms !important;
 }
 a:hover {
-    color: rgb(160, 160, 255);
-    text-decoration: underline;
+    color: var(--accent);
 }
 body {
     margin: 0;
@@ -43,23 +42,20 @@ img {
     max-width: 100%;
     max-height: 100%;
 }
-
 /* width */
 ::-webkit-scrollbar {
+    height: 8px;
     width: 8px;
 }
-
 /* Track */
 ::-webkit-scrollbar-track {
     display: none;
 }
-
 /* Handle */
 ::-webkit-scrollbar-thumb {
     background: rgba(255, 255, 255, 0.1);
     border-radius: 9999px;
 }
-
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: rgba(255, 255, 255, 0.2);
@@ -69,16 +65,16 @@ img {
 body[data-theme="dark_theme"] {
     color: white;
     background-color: black;
-    --color: white;
-    --bg-color: black;
+    --color: rgb(255, 255, 255);
+    --bg-color: rgb(0, 0, 0);
     --accent: rgb(100, 100, 255);
     --alt-accent: rgb(255, 100, 100);
 }
 body[data-theme="light_theme"] {
     color: black;
-    background-color: whitesmoke;
-    --color: black;
-    --bg-color: whitesmoke;
+    background-color: rgb(245, 245, 245);
+    --color: rgb(0, 0, 0);
+    --bg-color: rgb(245, 245, 245);
     --accent: rgb(255, 100, 100);
     --alt-accent: rgb(100, 100, 255);
 }
