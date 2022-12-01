@@ -21,7 +21,7 @@ const state = reactive({ isSettings: false });
         @click="state.isSettings = !state.isSettings"
     >
         <div
-            class="opacity-0 absolute w-8 h-8 grid place-items-center border-solid border-1 border-color rounded-full text-xl transition-all duration-300 pointer-events-none hover:text-accent hover:border-accent"
+            class="opacity-0 absolute w-8 h-8 grid place-items-center border-solid border-1 border-color rounded-full text-lg transition-all duration-300 pointer-events-none hover:text-accent hover:border-accent"
             :class="{ opened: state.isSettings }"
             @click="publicState.isMenu = !publicState.isMenu"
             id="menu-button"
