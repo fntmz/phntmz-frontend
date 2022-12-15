@@ -28,12 +28,12 @@
     }
 }
 a {
-    color: var(--color);
+    color: rgb(var(--color));
     text-decoration: none;
     transition: color 300ms;
 }
 a:hover {
-    color: var(--accent);
+    color: rgb(var(--accent));
 }
 body {
     margin: 0;
@@ -54,28 +54,30 @@ img {
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(255, 255, 255, 0.1);
+    background: rgba(var(--color), 0.1);
     border-radius: 9999px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(var(--color), 0.2);
 }
 
 /* (\=============== DARKMODE ===============/) */
 body[data-theme="dark_theme"] {
-    color: white;
-    background-color: black;
-    --color: rgb(255, 255, 255);
-    --bg-color: rgb(0, 0, 0);
-    --accent: rgb(100, 100, 255);
-    --alt-accent: rgb(255, 100, 100);
+    color: rgb(220, 220, 220);
+    background-color: rgb(17, 17, 17);
+    --color: 220, 220, 220;
+    --bg-color: 17, 17, 17;
+    --gray: 51, 51, 51;
+    --accent: 100, 100, 255;
+    --alt-accent: 255, 100, 100;
 }
 body[data-theme="light_theme"] {
-    color: black;
-    background-color: rgb(245, 245, 245);
-    --color: rgb(0, 0, 0);
-    --bg-color: rgb(245, 245, 245);
-    --accent: rgb(255, 100, 100);
-    --alt-accent: rgb(100, 100, 255);
+    color: rgb(17, 17, 17);
+    background-color: rgb(220, 220, 220);
+    --color: 17, 17, 17;
+    --bg-color: 220, 220, 220;
+    --gray: 180, 180, 180;
+    --accent: 255, 100, 100;
+    --alt-accent: 100, 100, 255;
 }

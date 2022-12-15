@@ -4,10 +4,11 @@ module.exports = {
     theme: {
         extend: {
             colors: {
-                color: "var(--color)",
-                "bg-color": "var(--bg-color)",
-                accent: "var(--accent)",
-                "alt-accent": "var(--alt-accent)",
+                color: "rgb(var(--color))",
+                "bg-color": "rgb(var(--bg-color))",
+                "custom-gray": "rgb(var(--gray))",
+                accent: "rgb(var(--accent))",
+                "alt-accent": "rgb(var(--alt-accent))",
             },
             borderWidth: {
                 1: "1px",
