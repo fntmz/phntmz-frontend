@@ -4,7 +4,7 @@ const onMouseMove = (e) => {
     var x = e.clientX - rect.left;
     var y = e.clientY - rect.top;
 
-    document.querySelector("#cursor").style.color = "red";
+    document.querySelector("#cursor").style.left = x + "px";
     document.querySelector("#cursor").style.top = y + "px";
 };
 

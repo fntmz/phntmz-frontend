@@ -11,6 +11,5 @@ if (localStorage.getItem("darkmode")) {
 
 <template>
     <Navbar />
-    <Cursor />
 </template>
 
