@@ -4,6 +4,12 @@ import Cursor from "./components/Cursor.vue";
 import Loader from "./components/Loader.vue";
 import Navbar from "./components/Navbar.vue";
 
+onMounted(() => {
+    setTimeout(() => {
+        document.body.style.pointerEvents = "initial";
+    }, 1000);
+});
+
 // (\=============== DARKMODE ===============/)
 if (localStorage.getItem("darkmode")) {
     document.body.setAttribute("data-theme", localStorage.getItem("darkmode"));

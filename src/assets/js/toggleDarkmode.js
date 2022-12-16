@@ -1,4 +1,4 @@
-export default function () {
+export default () => {
     if (localStorage.getItem("darkmode") == "light_theme") {
         localStorage.setItem("darkmode", "dark_theme");
         document.body.setAttribute("data-theme", "dark_theme");
@@ -6,4 +6,4 @@ export default function () {
         localStorage.setItem("darkmode", "light_theme");
         document.body.setAttribute("data-theme", "light_theme");
     }
-}
+};

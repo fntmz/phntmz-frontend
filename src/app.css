@@ -38,6 +38,7 @@ a:hover {
 body {
     margin: 0;
     transition: background-color 300ms;
+    pointer-events: none;
 }
 img {
     max-width: 100%;
@@ -74,10 +75,10 @@ body[data-theme="dark_theme"] {
 }
 body[data-theme="light_theme"] {
     color: rgb(17, 17, 17);
-    background-color: rgb(220, 220, 220);
+    background-color: rgb(238, 238, 238);
     --color: 17, 17, 17;
-    --bg-color: 220, 220, 220;
-    --gray: 180, 180, 180;
+    --bg-color: 180, 180, 238;
+    --gray: 198, 180, 180;
     --accent: 255, 100, 100;
     --alt-accent: 100, 100, 255;
 }

@@ -3,18 +3,13 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
 </script>
 
 <template>
-    <nav class="fixed top-8 bottom-8 left-8 right-8">
-        <div class="absolute h-20 w-20">
+    <nav class="z-[1] fixed top-8 bottom-8 left-8 right-8">
+        <div class="absolute right-0 h-20 w-20">
             <img src="../assets/img/favicon.jpg" alt="" />
         </div>
         <div
-            class="absolute w-full h-20 border-solid border-1 border-custom-gray pl-24 flex justify-between items-center"
+            class="absolute w-full h-20 border-solid border-1 border-custom-gray pr-24 flex justify-between items-center"
         >
-            <div
-                class="h-8 aspect-square bg-color rounded-full grid place-items-center overflow-visible transition-all duration-300 ease-[] hover:h-full"
-            >
-                <div class="mix-blend-difference">about</div>
-            </div>
             <a
                 href="javascipt:void(0)"
                 class="aspect-square h-full grid place-items-center text-lg"
@@ -22,9 +17,13 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
             >
                 <i class="fa-solid fa-moon"></i>
             </a>
+            <div class="text-right">
+                created by phntmz_ <br />
+                <span class="text-custom-gray text-sm">and others</span>
+            </div>
         </div>
         <div
-            class="absolute h-full w-20 border-solid border-1 border-custom-gray flex flex-col items-center justify-end"
+            class="absolute right-0 h-full w-20 border-solid border-1 border-custom-gray flex flex-col items-center justify-end"
         >
             <a
                 href="https://www.instagram.com/phntmz_/"
