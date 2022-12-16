@@ -10,6 +10,9 @@ module.exports = {
                 accent: "rgb(var(--accent))",
                 "alt-accent": "rgb(var(--alt-accent))",
             },
+            transitionProperty: {
+                filter: "filter",
+            },
             borderWidth: {
                 1: "1px",
             },

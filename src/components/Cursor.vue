@@ -9,21 +9,15 @@ const onMouseMove = (e) => {
 };
 
 document.addEventListener("mousemove", onMouseMove);
-
-// $(".btn, #menu-button, a, #gallery-cover > div > div, .navbar-item").hover(
-//     function () {
-//         $("#gallery-cursor").addClass("cursor-hover");
-//     },
-//     function () {
-//         $("#gallery-cursor").removeClass("cursor-hover");
-//     },
-// );
 </script>
 
 <template>
-    <div class="x-[2] fixed w-screen h-screen" id="cursor-area">
+    <div
+        class="x-[2] fixed w-screen h-screen pointer-events-none"
+        id="cursor-area"
+    >
         <div
-            class="aboslute w-8 aspect-square bg-accent rounded-full"
+            class="absolute w-8 h-8 border-solid border-custom-gray border-1 rounded-full -translate-x-1/2 -translate-y-1/2"
             id="cursor"
         ></div>
     </div>
