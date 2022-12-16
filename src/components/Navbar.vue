@@ -1,25 +1,45 @@
 <script setup>
+import { RouterLink } from "vue-router";
 import ToggleDarkmode from "../assets/js/toggleDarkmode";
 </script>
 
 <template>
-    <nav class="z-[1] fixed top-8 bottom-8 left-8 right-8">
+    <div class="z-[1] fixed top-8 bottom-8 left-8 right-8">
         <div class="absolute right-0 h-20 w-20">
             <img src="../assets/img/favicon.jpg" alt="" />
         </div>
         <div
-            class="absolute w-full h-20 border-solid border-1 border-custom-gray pr-24 flex justify-between items-center"
+            class="absolute w-full h-20 border-solid border-1 border-custom-gray pr-24 flex justify-between items-center overflow-clip"
         >
-            <a
-                href="javascipt:void(0)"
+            <button
                 class="aspect-square h-full grid place-items-center text-lg"
                 v-on:click="ToggleDarkmode"
             >
                 <i class="fa-solid fa-moon"></i>
-            </a>
+            </button>
             <div class="text-right">
                 created by phntmz_ <br />
-                <span class="text-custom-gray text-sm">and others</span>
+                <span class="text-custom-gray text-base">and others</span>
+            </div>
+            <div class="absolute w-screen -left-8 pointer-events-none">
+                <nav class="h-full container flex items-center text-sm">
+                    <RouterLink to="/">
+                        00. <br />
+                        <span class="font-bold">home</span>
+                    </RouterLink>
+                    <RouterLink to="/information">
+                        01. <br />
+                        <span class="font-bold">information</span>
+                    </RouterLink>
+                    <RouterLink to="/contact">
+                        02. <br />
+                        <span class="font-bold">contact</span>
+                    </RouterLink>
+                    <RouterLink to="/credits">
+                        03. <br />
+                        <span class="font-bold">credits</span>
+                    </RouterLink>
+                </nav>
             </div>
         </div>
         <div
@@ -50,5 +70,13 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
                 <i class="fa-brands fa-reddit"></i>
             </a>
         </div>
-    </nav>
+    </div>
 </template>
+
+<style scoped>
+nav > * {
+    margin-right: 2em;
+    line-height: 0.98;
+    pointer-events: initial;
+}
+</style>

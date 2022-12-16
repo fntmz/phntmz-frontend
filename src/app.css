@@ -27,12 +27,17 @@
         scroll-behavior: smooth;
     }
 }
-a {
+button {
+    all: unset;
+}
+a,
+button {
     color: rgb(var(--color));
     text-decoration: none;
     transition: color 300ms;
 }
-a:hover {
+a:hover,
+button:hover {
     color: rgb(var(--accent));
 }
 body {

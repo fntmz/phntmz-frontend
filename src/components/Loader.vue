@@ -1,13 +1,5 @@
 <script setup>
-import { onMounted, reactive } from "vue";
-
-const state = reactive({ active: false });
-
-onMounted(() => {
-    setTimeout(() => {
-        state.active = true;
-    }, 1000);
-});
+import state from "../state";
 </script>
 
 <template>
@@ -32,6 +24,11 @@ onMounted(() => {
             ><span>h</span><span>o</span><span>t</span><span>o</span
             ><span>g</span><span>r</span><span>a</span><span>p</span
             ><span>h</span><span>&nbsp;</span><span>🍃</span><span>"</span>
+        </div>
+        <div
+            class="absolute bottom-1/3 text-base text-custom-gray tracking-widest"
+        >
+            view on 1920 // 1080 for better visuals
         </div>
     </div>
 </template>
