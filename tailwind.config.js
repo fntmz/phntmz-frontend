@@ -11,6 +11,8 @@ module.exports = {
                 "alt-accent": "rgb(var(--alt-accent))",
             },
             transitionProperty: {
+                width: "width",
+                height: "height",
                 filter: "filter",
             },
             borderWidth: {

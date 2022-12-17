@@ -1,15 +1,20 @@
 <script setup>
 import { RouterLink } from "vue-router";
+import state from "../state";
 import ToggleDarkmode from "../assets/js/toggleDarkmode";
 </script>
 
 <template>
-    <div class="z-[1] fixed top-8 bottom-8 left-8 right-8">
-        <div class="absolute right-0 h-20 w-20">
+    <div
+        class="z-[1] fixed top-8 bottom-8 left-8 right-8 flex flex-row-reverse"
+    >
+        <div class="z-[1] absolute right-0 h-20 w-20">
             <img src="../assets/img/favicon.jpg" alt="" />
         </div>
         <div
-            class="absolute w-full h-20 border-solid border-1 border-custom-gray pr-24 flex justify-between items-center overflow-clip"
+            class="absolute w-20 h-20 border-solid border-1 border-custom-gray pr-20 flex justify-between items-center overflow-clip transition-width duration-[2000ms] delay-[2800ms]"
+            :class="{ active: state.active }"
+            id="top-nav"
         >
             <button
                 class="aspect-square h-full grid place-items-center text-lg"
@@ -17,7 +22,7 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
             >
                 <i class="fa-solid fa-moon"></i>
             </button>
-            <div class="text-right">
+            <div class="mr-4 text-right">
                 created by phntmz_ <br />
                 <span class="text-custom-gray text-base">and others</span>
             </div>
@@ -43,7 +48,9 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
             </div>
         </div>
         <div
-            class="absolute right-0 h-full w-20 border-solid border-1 border-custom-gray flex flex-col items-center justify-end"
+            class="absolute h-20 w-20 border-solid border-1 border-custom-gray flex flex-col items-center justify-end overflow-clip transition-height duration-[2000ms] delay-[2800ms]"
+            :class="{ active: state.active }"
+            id="right-nav"
         >
             <a
                 href="https://www.instagram.com/phntmz_/"
@@ -73,7 +80,28 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
     </div>
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+#top-nav,
+#right-nav {
+    & > * {
+        opacity: 0;
+        transition: opacity 300ms 5000ms;
+    }
+    &.active > * {
+        opacity: 1;
+    }
+}
+
+#top-nav {
+    &.active {
+        width: 100% !important;
+    }
+}
+#right-nav {
+    &.active {
+        height: 100% !important;
+    }
+}
 nav > * {
     margin-right: 2em;
     line-height: 0.98;
