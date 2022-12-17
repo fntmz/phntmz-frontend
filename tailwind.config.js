@@ -3,6 +3,14 @@ module.exports = {
     content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
     theme: {
         extend: {
+            screens: {
+                xs: "0px",
+                sm: "576px",
+                md: "768px",
+                lg: "992px",
+                xl: "1200px",
+                "2xl": "1400px",
+            },
             colors: {
                 color: "rgb(var(--color))",
                 "bg-color": "rgb(var(--bg-color))",
@@ -20,19 +28,18 @@ module.exports = {
             },
             container: {
                 center: true,
-                padding: {
-                    DEFAULT: "1rem",
-                    sm: "2rem",
-                    lg: "4rem",
-                    xl: "5rem",
-                    "2xl": "6rem",
+                "max-width": {
+                    xs: "100%",
+                    sm: "540px",
+                    md: "720px",
+                    lg: "960px",
+                    xl: "1140px",
+                    "2xl": "1320px",
                 },
-            },
-            backgroundImage: {
-                "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
             },
         },
     },
+    darkMode: "class",
     corePlugins: {
         preflight: false,
     },

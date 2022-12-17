@@ -4,7 +4,7 @@ import state from "../state";
 
 <template>
     <div
-        class="z-[9999] fixed w-screen h-screen grid place-items-center backdrop-blur-lg backdrop-brightness-110 overflow-hidden transition-opacity duration-500 delay-[2300ms]"
+        class="z-[9999] fixed w-screen h-screen grid place-items-center backdrop-blur-lg backdrop-brightness-110 overflow-hidden"
         :class="{ active: state.active }"
         id="loader-wrapper"
     >
@@ -26,19 +26,23 @@ import state from "../state";
             ><span>h</span><span>&nbsp;</span><span>🍃</span><span>"</span>
         </div>
         <div
-            class="absolute bottom-1/3 text-base text-custom-gray tracking-widest"
+            class="absolute bottom-1/3 text-sm text-neutral-500 tracking-widest"
         >
-            view on 1920 // 1080 for better visuals
+            view in 1920 // 1080 and dark theme for better visuals
         </div>
     </div>
 </template>
 
 <style scoped lang="scss">
-#loader-wrapper.active {
-    opacity: 0;
-    pointer-events: none;
+#loader-wrapper {
+    & {
+        transition: opacity 500ms 2300ms, pointer-events 0ms 5000ms;
+    }
+    &.active {
+        opacity: 0;
+        pointer-events: none;
+    }
 }
-
 #quote-wrapper {
     & > * {
         display: inline-block;

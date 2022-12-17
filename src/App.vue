@@ -8,16 +8,19 @@ import Navbar from "./components/Navbar.vue";
 
 onMounted(() => {
     setTimeout(() => {
-        document.body.style.pointerEvents = "initial";
         state.active = true;
     }, 1000);
 });
 
 // (\=============== DARKMODE ===============/)
-if (localStorage.getItem("darkmode")) {
-    document.body.setAttribute("data-theme", localStorage.getItem("darkmode"));
+if (
+    localStorage.darkmode === "dark" ||
+    (!("darkmode" in localStorage) &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches)
+) {
+    document.documentElement.classList.add("dark");
 } else {
-    document.body.setAttribute("data-theme", "dark_theme");
+    document.documentElement.classList.remove("dark");
 }
 </script>
 
@@ -26,8 +29,21 @@ if (localStorage.getItem("darkmode")) {
     <Loader />
     <Navbar />
 
-    <main class="container pt-[50vh]">
-        <RouterView />
+    <main
+        class="container pt-[50vh] opacity-0 transition-opacity duration-300 delay-[4500ms]"
+        :class="{ active: state.active }"
+    >
+        <RouterView v-slot="{ Component }" class="absolute">
+            <transition name="fade">
+                <component :is="Component" />
+            </transition>
+        </RouterView>
     </main>
 </template>
+
+<style scoped>
+main.active {
+    opacity: 1 !important;
+}
+</style>
 

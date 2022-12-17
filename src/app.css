@@ -15,6 +15,14 @@
     -webkit-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    overflow-y: scroll !important;
+    color: rgb(17, 17, 17);
+    background-color: rgb(238, 238, 238);
+    --color: 17, 17, 17;
+    --bg-color: 238, 238, 238;
+    --gray: 204, 204, 204;
+    --accent: 255, 100, 100;
+    --alt-accent: 100, 100, 255;
 }
 *,
 *::before,
@@ -43,7 +51,6 @@ button:hover {
 body {
     margin: 0;
     transition: background-color 300ms;
-    pointer-events: none;
 }
 img {
     max-width: 100%;
@@ -56,34 +63,36 @@ img {
 }
 /* Track */
 ::-webkit-scrollbar-track {
-    display: none;
+    background: rgb(var(--bg-color));
 }
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: rgba(var(--color), 0.1);
+    background: rgb(var(--gray));
     border-radius: 9999px;
 }
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(var(--color), 0.2);
+    background: rgb(var(--color), 0.3);
+}
+
+/* (\=============== ROUTE TRANSITIONS ===============/) */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
 }
 
 /* (\=============== DARKMODE ===============/) */
-body[data-theme="dark_theme"] {
-    color: rgb(220, 220, 220);
-    background-color: rgb(17, 17, 17);
-    --color: 220, 220, 220;
+:root.dark {
+    color: rgb(238, 238, 238) !important;
+    background-color: rgb(17, 17, 17) !important;
+    --color: 238, 238, 238;
     --bg-color: 17, 17, 17;
     --gray: 51, 51, 51;
     --accent: 100, 100, 255;
     --alt-accent: 255, 100, 100;
-}
-body[data-theme="light_theme"] {
-    color: rgb(17, 17, 17);
-    background-color: rgb(238, 238, 238);
-    --color: 17, 17, 17;
-    --bg-color: 180, 180, 238;
-    --gray: 198, 180, 180;
-    --accent: 255, 100, 100;
-    --alt-accent: 100, 100, 255;
 }
