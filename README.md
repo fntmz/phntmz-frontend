@@ -5,3 +5,4 @@ A complete redesign of the [website](https://www.phntmz.com/). Switched to the [
 ###### Frameworks used:
 - [Vue 3](https://vuejs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
+- [Express](https://expressjs.com/) (future backend)
