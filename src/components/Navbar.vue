@@ -43,7 +43,9 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
             </nav>
             <div class="mr-4 text-right">
                 created by phntmz_ <br />
-                <span class="text-custom-gray text-sm">and others</span>
+                <RouterLink to="/credits" class="text-sm">
+                    and others
+                </RouterLink>
             </div>
         </div>
         <div

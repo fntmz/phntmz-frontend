@@ -11,5 +11,15 @@ export default defineConfig({
             "@": fileURLToPath(new URL("./src", import.meta.url)),
         },
     },
+    transpileDependencies: true,
+    configureWebpack: {
+        devServer: {
+            proxy: {
+                "/api": {
+                    target: "http://localhost:8080",
+                },
+            },
+        },
+    },
 });
 
