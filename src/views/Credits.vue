@@ -18,7 +18,7 @@ export default {
                     people: ["bao anh ngo", "minh anh do", "hieu minh nguyen"],
                 },
                 {
-                    roles: "literary",
+                    roles: "literary // language",
                     people: ["bao anh ngo", " minh anh do", "hieu minh nguyen"],
                 },
                 {
