@@ -58,55 +58,47 @@ function openSocials(name) {
 </script>
 
 <template>
-    <div>
+    <div
+        class="w-[150%] grid grid-cols-3 overflow-hidden transition-transform duration-1000 delay-300"
+        :class="{ opened: state.socialsNameOpened }"
+        id="credits-wrapper"
+    >
         <div
-            class="w-[150%] grid grid-cols-3 overflow-hidden transition-transform duration-1000 delay-300"
+            class="fixed col-span-1 transition-opacity duration-300 delay-[1300ms]"
             :class="{ opened: state.socialsNameOpened }"
-            id="credits-wrapper"
+            id="credits-title"
         >
-            <div
-                class="fixed col-span-1 transition-opacity duration-300 delay-[1300ms]"
-                :class="{ opened: state.socialsNameOpened }"
-                id="credits-title"
-            >
-                <h1>credits</h1>
-            </div>
-            <div class="col-start-2 col-span-1">
+            <h1>credits</h1>
+        </div>
+        <div class="col-start-2 col-span-1">
+            <div class="grid grid-cols-2 mb-8" v-for="categories in credits">
                 <div
-                    class="grid grid-cols-2 mb-8"
-                    v-for="categories in credits"
+                    class="col-span-1 text-sm transition-opacity duration-300 delay-[1300ms]"
+                    :class="{ opened: state.socialsNameOpened }"
+                    id="categories-wrapper"
                 >
-                    <div
-                        class="col-span-1 text-sm transition-opacity duration-300 delay-[1300ms]"
-                        :class="{ opened: state.socialsNameOpened }"
-                        id="categories-wrapper"
-                    >
-                        {{ categories.roles }}
-                    </div>
-                    <ul
-                        class="pl-24 col-span-1 text-lg font-medium tracking-tight transition-transform duration-1000 delay-300"
-                        :class="{ opened: state.socialsNameOpened }"
-                        id="people-wrapper"
-                    >
-                        <li v-for="name in categories.people">
-                            <div
-                                v-if="name.includes('</a>')"
-                                v-html="name"
-                            ></div>
-                            <button v-else v-on:click="openSocials(name)">
-                                {{ name }}
-                            </button>
-                        </li>
-                    </ul>
+                    {{ categories.roles }}
                 </div>
+                <ul
+                    class="pl-24 col-span-1 text-lg font-medium tracking-tight transition-transform duration-1000 delay-300"
+                    :class="{ opened: state.socialsNameOpened }"
+                    id="people-wrapper"
+                >
+                    <li v-for="name in categories.people">
+                        <div v-if="name.includes('</a>')" v-html="name"></div>
+                        <button v-else v-on:click="openSocials(name)">
+                            {{ name }}
+                        </button>
+                    </li>
+                </ul>
             </div>
-            <div
-                class="opacity-0 col-start-3 col-span-1 transition-opacity duration-300"
-                :class="{ opened: state.socialsNameOpened }"
-                id="socials-display"
-            >
-                <SocialsDisplay />
-            </div>
+        </div>
+        <div
+            class="opacity-0 col-start-3 col-span-1 transition-opacity duration-300"
+            :class="{ opened: state.socialsNameOpened }"
+            id="socials-display"
+        >
+            <SocialsDisplay />
         </div>
     </div>
 </template>
