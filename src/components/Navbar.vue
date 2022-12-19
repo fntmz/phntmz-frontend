@@ -23,7 +23,7 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
             >
                 <i class="fa-solid fa-moon"></i>
             </button>
-            <nav class="flex items-center text-sm">
+            <nav class="flex items-center">
                 <RouterLink to="/">
                     00. <br />
                     <span class="font-bold">home</span>
@@ -41,9 +41,9 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
                     <span class="font-bold">credits</span>
                 </RouterLink>
             </nav>
-            <div class="mr-4 text-right">
+            <div class="mr-4 text-right font-medium">
                 created by phntmz_ <br />
-                <RouterLink to="/credits" class="text-sm">
+                <RouterLink to="/credits" class="text-sm font-normal">
                     and others
                 </RouterLink>
             </div>
@@ -107,7 +107,7 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
     }
 }
 nav > * {
-    margin-right: 2em;
+    padding: 0 2em;
     line-height: 0.98;
 }
 </style>

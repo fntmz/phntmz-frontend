@@ -33,7 +33,7 @@ if (
         class="container pt-[50vh] opacity-0 transition-opacity duration-300 delay-[4500ms]"
         :class="{ active: state.active }"
     >
-        <RouterView v-slot="{ Component }" class="absolute">
+        <RouterView v-slot="{ Component }">
             <transition name="fade">
                 <component :is="Component" />
             </transition>
