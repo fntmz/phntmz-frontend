@@ -10,7 +10,7 @@ function closeSocials() {
 </script>
 
 <template>
-    <div class="fixed w-1/2 h-screen top-1/2 right-0 grid grid-cols-2 gap-24">
+    <div class="grid grid-cols-2 gap-24">
         <div class="col-span-1 text-sm">
             <button class="pr-8" v-on:click="closeSocials">&lt;= back</button>
             {{ state.socialsNameProp }}

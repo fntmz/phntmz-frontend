@@ -59,21 +59,26 @@ function openSocials(name) {
 
 <template>
     <div>
-        <div
-            class="grid grid-cols-2 overflow-hidden transition-transform duration-1000 delay-300"
-            :class="{ opened: state.socialsNameOpened }"
-            id="credits-wrapper"
-        >
-            <div
-                class="fixed col-span-1 transition-opacity duration-300 delay-[1300ms]"
+        <div class="fixed h-full container grid grid-cols-2">
+            <h1
+                class="col-span-1 transition-opacity duration-300 delay-[1300ms]"
                 :class="{ opened: state.socialsNameOpened }"
-                id="credits-title"
+                id="title-wrapper"
             >
-                <h1>credits</h1>
+                credits
+            </h1>
+            <div
+                class="opacity-0 col-span-1 col-start-2 transition-opacity duration-300 pointer-events-none"
+                :class="{ opened: state.socialsNameOpened }"
+                id="socials-wrapper"
+            >
+                <SocialsDisplay />
             </div>
-            <div class="col-start-2 col-span-1">
+        </div>
+        <div class="container grid grid-cols-2">
+            <div class="col-span-1 col-start-2">
                 <div
-                    class="grid grid-cols-2 mb-8"
+                    class="grid grid-cols-2 mb-8 gap-24"
                     v-for="categories in credits"
                 >
                     <div
@@ -84,7 +89,7 @@ function openSocials(name) {
                         {{ categories.roles }}
                     </div>
                     <ul
-                        class="pl-24 col-span-1 text-lg font-medium tracking-tight transition-transform duration-1000 delay-300"
+                        class="z-[1] col-span-1 text-lg font-medium tracking-tight transition-transform duration-1000 delay-300"
                         :class="{ opened: state.socialsNameOpened }"
                         id="people-wrapper"
                     >
@@ -101,38 +106,22 @@ function openSocials(name) {
                 </div>
             </div>
         </div>
-        <div
-            class="collapse opacity-0"
-            :class="{ opened: state.socialsNameOpened }"
-            id="socials-display"
-        >
-            <SocialsDisplay />
-        </div>
     </div>
 </template>
 
 <style scoped>
-#credits-wrapper.opened {
-    transform: translateX(-50%);
-}
-#credits-title.opened {
-    opacity: 0;
-    transition-delay: 0ms !important;
-}
+#title-wrapper.opened,
 #categories-wrapper.opened {
     opacity: 0;
-    transition-delay: 0ms !important;
+    transition: opacity 300ms !important;
+    pointer-events: none;
+}
+#socials-wrapper.opened {
+    opacity: 1 !important;
+    transition: opacity 300ms 1300ms !important;
+    pointer-events: initial !important;
 }
 #people-wrapper.opened {
-    transform: translateX(-100%);
-}
-#socials-display {
-    transition: opacity 300ms, visibility 0ms 300ms;
-}
-#socials-display.opened {
-    visibility: initial !important;
-    opacity: 1 !important;
-    transition-delay: 1300ms !important;
-    pointer-events: initial !important;
+    transform: translateX(calc(-300% - 12em));
 }
 </style>
