@@ -102,7 +102,7 @@ function openSocials(name) {
             </div>
         </div>
         <div
-            class="opacity-0 transition-opacity duration-300 pointer-events-none"
+            class="collapse opacity-0"
             :class="{ opened: state.socialsNameOpened }"
             id="socials-display"
         >
@@ -126,7 +126,11 @@ function openSocials(name) {
 #people-wrapper.opened {
     transform: translateX(-100%);
 }
+#socials-display {
+    transition: opacity 300ms, visibility 0ms 300ms;
+}
 #socials-display.opened {
+    visibility: initial !important;
     opacity: 1 !important;
     transition-delay: 1300ms !important;
     pointer-events: initial !important;

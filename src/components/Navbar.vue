@@ -13,17 +13,17 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
             <img src="../assets/img/favicon.jpg" alt="" />
         </div>
         <div
-            class="absolute w-20 h-20 border-solid border-1 border-custom-gray pr-20 flex justify-between items-center overflow-clip transition-width duration-[2000ms] delay-[2200ms]"
+            class="absolute w-20 h-20 border-solid border-1 border-custom-gray pr-20 flex justify-between items-center overflow-clip transition-width duration-[2000ms] delay-[2200ms] pointer-events-none"
             :class="{ active: state.active }"
             id="top-nav"
         >
             <button
-                class="aspect-square h-full grid place-items-center text-lg"
+                class="aspect-square h-full grid place-items-center text-lg pointer-events-auto"
                 v-on:click="ToggleDarkmode"
             >
                 <i class="fa-solid fa-moon"></i>
             </button>
-            <nav class="flex items-center">
+            <nav class="flex items-center pointer-events-auto">
                 <RouterLink to="/">
                     00. <br />
                     <span class="font-bold">home</span>
@@ -41,7 +41,7 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
                     <span class="font-bold">credits</span>
                 </RouterLink>
             </nav>
-            <div class="mr-4 text-right font-medium">
+            <div class="mr-4 text-right font-medium pointer-events-auto">
                 created by phntmz_ <br />
                 <RouterLink to="/credits" class="text-sm font-normal">
                     and others
@@ -49,31 +49,31 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
             </div>
         </div>
         <div
-            class="absolute h-20 w-20 border-solid border-1 border-custom-gray flex flex-col items-center justify-end overflow-clip transition-height duration-[2000ms] delay-[2200ms]"
+            class="absolute h-20 w-20 border-solid border-1 border-custom-gray flex flex-col items-center justify-end overflow-clip transition-height duration-[2000ms] delay-[2200ms] pointer-events-none"
             :class="{ active: state.active }"
             id="right-nav"
         >
             <a
                 href="https://www.instagram.com/phntmz_/"
-                class="aspect-square w-full grid place-items-center text-lg"
+                class="aspect-square w-full grid place-items-center text-lg pointer-events-auto"
             >
                 <i class="fa-brands fa-instagram"></i>
             </a>
             <a
                 href="https://www.facebook.com/phntmzz/"
-                class="aspect-square w-full grid place-items-center text-lg"
+                class="aspect-square w-full grid place-items-center text-lg pointer-events-auto"
             >
                 <i class="fa-brands fa-facebook"></i>
             </a>
             <a
                 href="https://github.com/fntmz"
-                class="aspect-square w-full grid place-items-center text-lg"
+                class="aspect-square w-full grid place-items-center text-lg pointer-events-auto"
             >
                 <i class="fa-brands fa-github"></i>
             </a>
             <a
                 href="https://www.reddit.com/user/phntmz_"
-                class="aspect-square w-full grid place-items-center text-lg"
+                class="aspect-square w-full grid place-items-center text-lg pointer-events-auto"
             >
                 <i class="fa-brands fa-reddit"></i>
             </a>
