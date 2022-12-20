@@ -26,7 +26,7 @@ let credits = [
         people: ["hieu minh nguyen", "ayush pramanik"],
     },
     {
-        roles: "motion",
+        roles: "motion // animation",
         people: ["hieu minh nguyen"],
     },
     {
@@ -60,7 +60,7 @@ function openSocials(name) {
 <template>
     <div>
         <div
-            class="w-[150%] grid grid-cols-3 overflow-hidden transition-transform duration-1000 delay-300"
+            class="grid grid-cols-2 overflow-hidden transition-transform duration-1000 delay-300"
             :class="{ opened: state.socialsNameOpened }"
             id="credits-wrapper"
         >
@@ -100,20 +100,20 @@ function openSocials(name) {
                     </ul>
                 </div>
             </div>
-            <div
-                class="opacity-0 col-start-3 col-span-1 transition-opacity duration-300"
-                :class="{ opened: state.socialsNameOpened }"
-                id="socials-display"
-            >
-                <SocialsDisplay />
-            </div>
+        </div>
+        <div
+            class="opacity-0 transition-opacity duration-300 pointer-events-none"
+            :class="{ opened: state.socialsNameOpened }"
+            id="socials-display"
+        >
+            <SocialsDisplay />
         </div>
     </div>
 </template>
 
 <style scoped>
 #credits-wrapper.opened {
-    transform: translateX(calc(-100% / 3));
+    transform: translateX(-50%);
 }
 #credits-title.opened {
     opacity: 0;
@@ -129,5 +129,6 @@ function openSocials(name) {
 #socials-display.opened {
     opacity: 1 !important;
     transition-delay: 1300ms !important;
+    pointer-events: initial !important;
 }
 </style>
