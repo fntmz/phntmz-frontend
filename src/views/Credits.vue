@@ -122,6 +122,6 @@ function openSocials(name) {
     pointer-events: initial !important;
 }
 #people-wrapper.opened {
-    transform: translateX(calc(-300% - 12em));
+    transform: translateX(calc(-300% - 12rem));
 }
 </style>
