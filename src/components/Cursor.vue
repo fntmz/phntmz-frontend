@@ -13,7 +13,7 @@ document.addEventListener("mousemove", onMouseMove);
 
 <template>
     <div
-        class="z-[2] fixed w-screen h-screen pointer-events-none"
+        class="z-[1] fixed w-screen h-screen pointer-events-none"
         id="cursor-area"
     >
         <div
@@ -26,7 +26,7 @@ document.addEventListener("mousemove", onMouseMove);
 
 <style scoped>
 #bg {
-    background-image: url(../assets/img/noise.jpg);
+    background-image: url(../assets/media/noise.jpg);
 }
 
 @media only screen and (pointer: fine) and (any-pointer: fine) {
