@@ -1,19 +1,29 @@
-<script setup>
-import stateRaw from "../../state";
+<script>
+import store from "../../../store";
 
-let socials = ["facebook", "instagram", "twitter", "discord"];
+export default {
+    name: "SocialsDisplay",
+    props: ["socialsNameProp"],
 
-let state = stateRaw.socials;
-function closeSocials() {
-    state.socialsNameOpened = false;
-}
+    data() {
+        return {
+            store,
+            socials: ["facebook", "instagram", "twitter", "discord"],
+        };
+    },
+    methods: {
+        closeSocials() {
+            store.socialsNameOpened = false;
+        },
+    },
+};
 </script>
 
 <template>
     <div class="grid grid-cols-2 gap-24">
         <div class="col-span-1 text-sm">
             <button class="pr-8" v-on:click="closeSocials">&lt;= back</button>
-            {{ state.socialsNameProp }}
+            {{ store.socialsNameProp }}
         </div>
         <ul class="col-span-1 col-start-2 text-lg font-medium tracking-tight">
             <li v-for="social in socials">

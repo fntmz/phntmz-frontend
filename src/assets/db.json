@@ -1,0 +1,69 @@
+{
+    "people": {
+        "<a href='https://weare.tm/' target='_blank'>aristide benoist's tm</a>": {
+            "roles": [0]
+        },
+        "bao anh ngo": {
+            "roles": [1, 2, 3, 7],
+            "socials": {
+                "0": "https://www.facebook.com/profile.php?id=100015543852192",
+                "1": "https://www.instagram.com/baoanh_nba/"
+            },
+            "photo": "../../assets/img/gallery/IMG_0710.JPG"
+        },
+        "minh anh do": {
+            "roles": [1, 2, 3, 7],
+            "socials": {
+                "1": "https://www.instagram.com/_mank._/"
+            },
+            "photo": "../../assets/img/gallery/IMG_0652.JPG"
+        },
+        "hieu minh nguyen": {
+            "roles": [1, 2, 3, 4, 5, 6, 7],
+            "socials": {
+                "0": "https://www.facebook.com/phntmzz/",
+                "1": "https://www.instagram.com/phntmz_/"
+            }
+        },
+        "ayush pramanik": {
+            "roles": [4]
+        },
+        "huong giang vu": {
+            "roles": [7],
+            "socials": {
+                "1": "https://www.instagram.com/illicit_v/"
+            }
+        },
+        "jamiel masangkay": {
+            "roles": [7]
+        },
+        "cong minh ho": {
+            "roles": [7]
+        },
+        "dan anh do": {
+            "roles": [7]
+        },
+        "anh thu le": {
+            "roles": [7]
+        },
+        "michael son": {
+            "roles": [7],
+            "socials": {
+                "0": "https://www.facebook.com/profile.php?id=100015543852192",
+                "1": "https://www.instagram.com/baoanh_nba/"
+            },
+            "photo": "../../assets/img/gallery/IMG_0734.JPG"
+        }
+    },
+    "roles": [
+        "inspired by",
+        "photography // cinematography",
+        "lighting",
+        "literary // language",
+        "user experience // interface",
+        "motion // animation",
+        "backend development",
+        "faces"
+    ],
+    "socials": ["facebook", "instagram", "twitter", "github"]
+}

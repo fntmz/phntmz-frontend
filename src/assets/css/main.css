@@ -76,8 +76,11 @@ button {
     transition: color 300ms;
 }
 a:hover,
-button:hover {
+a:hover *,
+button:hover,
+button:hover * {
     color: rgb(var(--accent));
+    fill: rgb(var(--accent));
 }
 body {
     margin: 0;
@@ -104,20 +107,4 @@ img {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
     background: rgb(var(--color), 0.3);
-}
-
-/* (\=============== ROUTE TRANSITIONS ===============/) */
-.fade-enter-active,
-.fade-leave-active {
-    transition: opacity 500ms, transform 500ms;
-}
-
-.fade-enter-active {
-    transition-delay: 500ms;
-}
-
-.fade-enter-from,
-.fade-leave-to {
-    opacity: 0;
-    transform: translateY(0.5em);
 }

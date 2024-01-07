@@ -1,7 +1,22 @@
-<script setup>
+<script>
 import { RouterLink } from "vue-router";
-import state from "../state";
-import ToggleDarkmode from "../assets/js/toggleDarkmode";
+import store from "../../../store";
+import ToggleDarkmode from "../../assets/js/toggleDarkmode";
+
+export default {
+    name: "Navbar",
+    components: {
+        RouterLink,
+    },
+    data() {
+        return {
+            store,
+        };
+    },
+    methods: {
+        ToggleDarkmode,
+    },
+};
 </script>
 
 <template>
@@ -9,12 +24,10 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
         class="z-[1] fixed top-8 bottom-8 left-8 right-8 flex flex-row-reverse pointer-events-none dark:mix-blend-difference"
         id="nav-wrapper"
     >
-        <div class="z-[1] absolute right-0 h-20 w-20">
-            <img src="../assets/img/favicon.jpg" alt="" />
-        </div>
+        <div class="z-[1] absolute right-0 h-20 w-20"></div>
         <div
             class="absolute w-20 h-20 border-solid border-1 border-custom-gray pr-20 flex justify-between items-center overflow-clip transition-width duration-[2000ms] delay-[2200ms] pointer-events-none"
-            :class="{ active: state.active }"
+            :class="{ active: store.active }"
             id="top-nav"
         >
             <button
@@ -50,7 +63,7 @@ import ToggleDarkmode from "../assets/js/toggleDarkmode";
         </div>
         <div
             class="absolute h-20 w-20 border-solid border-1 border-custom-gray flex flex-col items-center justify-end overflow-clip transition-height duration-[2000ms] delay-[2200ms] pointer-events-none"
-            :class="{ active: state.active }"
+            :class="{ active: store.active }"
             id="right-nav"
         >
             <a

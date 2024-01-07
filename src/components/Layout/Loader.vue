@@ -1,16 +1,24 @@
-<script setup>
-import state from "../state";
+<script>
+import store from "../../../store";
+export default {
+    name: "Loader",
+    data() {
+        return {
+            store,
+        };
+    },
+};
 </script>
 
 <template>
     <div
         class="z-[9999] fixed w-screen h-screen grid place-items-center backdrop-blur-lg backdrop-brightness-110 overflow-hidden"
-        :class="{ active: state.active }"
+        :class="{ active: store.active }"
         id="loader-wrapper"
     >
         <div
             class="font-light tracking-[.2em] overflow-hidden"
-            :class="{ active: state.active }"
+            :class="{ active: store.active }"
             id="quote-wrapper"
         >
             <span>"</span><span>e</span><span>v</span><span>e</span
