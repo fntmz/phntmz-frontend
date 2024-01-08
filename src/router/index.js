@@ -42,7 +42,7 @@ const router = createRouter({
                     path: "/create",
                     name: "create",
                     component: Create,
-                    meta: { requiresAuth: true },
+                    meta: { requiresAuth: false },
                 },
                 {
                     path: "/login",
