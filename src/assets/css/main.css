@@ -86,6 +86,19 @@ body {
     margin: 0;
     transition: background-color 300ms;
 }
+input,
+textarea {
+    color: rgb(var(--color));
+    background: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: medium;
+    outline: none;
+    resize: none;
+}
+::placeholder,
+::-ms-input-placeholder {
+    color: rgb(var(--gray));
+}
 img {
     max-width: 100%;
     max-height: 100%;

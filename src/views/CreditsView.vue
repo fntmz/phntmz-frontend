@@ -68,7 +68,7 @@ export default {
 
 <template>
     <div>
-        <div class="fixed h-full container grid grid-cols-2">
+        <div class="fixed container grid grid-cols-2">
             <h1
                 class="col-span-1 transition-opacity duration-300 delay-[1300ms]"
                 :class="{ opened: store.socialsNameOpened }"
@@ -84,7 +84,7 @@ export default {
                 <SocialsDisplay />
             </div>
         </div>
-        <div class="container grid grid-cols-2">
+        <div class="grid grid-cols-2">
             <div class="col-span-1 col-start-2">
                 <div
                     class="grid grid-cols-2 mb-8 gap-24"

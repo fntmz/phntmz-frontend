@@ -53,6 +53,10 @@ export default {
                     03. <br />
                     <span class="font-bold">credits</span>
                 </RouterLink>
+                <RouterLink to="/create">
+                    0420. <br />
+                    <span class="font-bold">create</span>
+                </RouterLink>
             </nav>
             <div class="mr-4 text-right font-medium pointer-events-auto">
                 created by phntmz_ <br />

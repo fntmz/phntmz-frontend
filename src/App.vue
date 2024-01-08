@@ -1,4 +1,5 @@
 <script>
+import Cursor from "./components/Layout/Cursor.vue";
 import store from "../store";
 import { RouterView } from "vue-router";
 
@@ -6,6 +7,7 @@ export default {
     name: "App",
     components: {
         RouterView,
+        Cursor,
     },
     setup() {
         setTimeout(() => {
@@ -25,6 +27,8 @@ export default {
 </script>
 
 <template>
+    <Cursor />
+
     <div id="app">
         <RouterView />
     </div>

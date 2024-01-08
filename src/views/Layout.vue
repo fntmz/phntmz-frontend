@@ -1,16 +1,14 @@
 <script>
-import Cursor from "../components/Layout/Cursor.vue";
-import Loader from "../components/Layout/Loader.vue";
 import Navbar from "../components/Layout/Navbar.vue";
+import Loader from "../components/Layout/Loader.vue";
 import "../assets/css/transition.css";
 import store from "../../store";
 
 export default {
     name: "Layout",
     components: {
-        Cursor,
-        Loader,
         Navbar,
+        Loader,
     },
     data() {
         return {
@@ -21,9 +19,8 @@ export default {
 </script>
 
 <template>
-    <Cursor />
-    <Loader />
     <Navbar />
+    <Loader />
 
     <main
         class="container pt-[50vh] opacity-0 transition-opacity duration-300 delay-[4500ms]"
